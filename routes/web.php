@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\admin\CourseAdminController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\MateriAdminController;
 use App\Http\Controllers\guest\BerandaController;
 use App\Http\Controllers\user\HomeUserController;
+use App\Http\Controllers\user\CourseUserController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -27,7 +30,7 @@ Route::middleware(['auth', 'role:User'])->group(function () {
 // Admin
 Route::middleware(['auth', 'role:Admin'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
-    
+
     Route::get('/manage-education', [CourseAdminController::class, 'index']);
     Route::get('/manage-education/create', [CourseAdminController::class, 'create']);
     Route::post('/manage-education/create', [CourseAdminController::class, 'store']);
