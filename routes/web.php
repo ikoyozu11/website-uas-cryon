@@ -20,9 +20,25 @@ Route::get('/', [BerandaController::class, 'index']);
 // User
 Route::middleware(['auth', 'role:User'])->group(function () {
     Route::get('/home', [HomeUserController::class, 'index']);
+    Route::get('/education', [CourseUserController::class, 'index']);
+    Route::get('/education-detail/{id}', [CourseUserController::class, 'show']);
 });
 
 // Admin
 Route::middleware(['auth', 'role:Admin'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
+    
+    Route::get('/manage-education', [CourseAdminController::class, 'index']);
+    Route::get('/manage-education/create', [CourseAdminController::class, 'create']);
+    Route::post('/manage-education/create', [CourseAdminController::class, 'store']);
+    Route::get('/manage-education/edit/{id}', [CourseAdminController::class, 'edit']);
+    Route::put('/manage-education/edit/{id}', [CourseAdminController::class, 'update']);
+    Route::delete('/manage-education/delete/{id}', [CourseAdminController::class, 'destroy']);
+
+    Route::get('/manage-materi/{id}', [MateriAdminController::class, 'index']);
+    Route::get('/manage-materi/create/{id}', [MateriAdminController::class, 'create']);
+    Route::post('/manage-materi/create/{id}', [MateriAdminController::class, 'store']);
+    Route::get('/manage-materi/edit/{course_id}/{materi_id}', [MateriAdminController::class, 'edit']);
+    Route::put('/manage-materi/edit/{course_id}/{materi_id}', [MateriAdminController::class, 'update']);
+    Route::delete('/manage-materi/delete/{course_id}/{materi_id}', [MateriAdminController::class, 'destroy']);
 });
