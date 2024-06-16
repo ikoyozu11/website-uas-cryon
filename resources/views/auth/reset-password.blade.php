@@ -4,6 +4,10 @@
             <x-authentication-card-logo />
         </x-slot>
 
+        <div class="flex w-full justify-center mb-3">
+            <h1 class="text-4xl font-extrabold bg-gradient-to-r from-[#7C6CFB] from-10% to-[#28B8FF] to-100% text-transparent bg-clip-text">Reset Password</h1>
+        </div>
+
         <x-validation-errors class="mb-4" />
 
         <form method="POST" action="{{ route('password.update') }}">

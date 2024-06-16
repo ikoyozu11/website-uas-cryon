@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
-  use HasFactory;
+    use HasFactory;
 
-  protected $table = 'courses';
-  protected $fillable = ['nama_course', 'gambar_course', 'deskripsi_course'];
-  protected $guarded = [];
+    protected $table = 'courses';
+    protected $fillable = ['nama_course', 'gambar_course', 'deskripsi_course'];
+    protected $guarded = [];
 }

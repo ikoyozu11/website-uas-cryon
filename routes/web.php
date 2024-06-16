@@ -27,7 +27,8 @@ Route::middleware(['auth', 'role:User'])->group(function () {
 // Admin
 Route::middleware(['auth', 'role:Admin'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
-
+    
+    Route::get('/manage-education', [CourseAdminController::class, 'index']);
     Route::get('/manage-education/create', [CourseAdminController::class, 'create']);
     Route::post('/manage-education/create', [CourseAdminController::class, 'store']);
     Route::get('/manage-education/edit/{id}', [CourseAdminController::class, 'edit']);

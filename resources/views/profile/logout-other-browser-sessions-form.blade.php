@@ -31,7 +31,7 @@
 
                         <div class="ms-3">
                             <div class="text-sm text-gray-600">
-                                {{ $session->agent->platform() ? $session->agent->platform() : __('Unknown') }} - {{ $session->agent->browser() ? $session->agent->browser() : __('Unknown') }}
+                                {{ $session->agent->platform() ? $session->agent->platform() : _('Unknown') }} - {{ $session->agent->browser() ? $session->agent->browser() : _('Unknown') }}
                             </div>
 
                             <div>
