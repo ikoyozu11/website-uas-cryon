@@ -12,7 +12,8 @@ class MateriCourse extends Model
     protected $fillable = ['course_id', 'nama_materi', 'gambar_materi', 'isi_matetri'];
     protected $guarded = [];
 
-    public function course() {
+    public function course()
+    {
         return $this->belongsTo(Course::class, 'course_id');
     }
 }
