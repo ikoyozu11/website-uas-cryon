@@ -6,4 +6,13 @@
 4. Ganti isi pada file `.env` menggunakan file yang sudah kami sediakan di link berikut ini : `https://drive.google.com/drive/folders/1hmJ1cewDry4D7tDOUz1MZLJ1n6nsWjHy?usp=sharing`
 5. Jalankan perintah `php artisan key:generate`
 6. Jalankan perintah `php artisan migrate`
+7. Jika ingin membuka direktori project, dapat masuk ke dalam Folder "Project Directory
+
+## Refresh Cheatsheet:
+- `php artisan route:clear`
+- `php artisan optimize:clear`
+
+## Reset Activity:
+- `git reset --hard HEAD~()`"() Diisi Dengan Konstanta Keberapa Terakhir Melakukan Aktivitas, Contoh: `git reset --hard HEAD~1`"
+
 # website-uas-cryon
